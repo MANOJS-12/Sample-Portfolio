@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj's Simple Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/3d179cd4a1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="name.png" class="name">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>TECH STUDENT</p>
+                <h1>Hello, I'm <span>Manoj</span><br>budding Er.</h1>
+            </div>
+        </div>    
+    </div>
+    <!------------------about me-------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tile">About Me</h1><br>
+                     <p>As a budding Computer Science student specializing in Cybersecurity, I fuse theoretical knowledge with a keen interest in practical applications. My academic journey delves into the intricacies of web design, cryptography, and data analysis. Eager to contribute fresh perspectives and innovation to the evolving landscape of technology</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI</span><br>Designing Web/App interface</li>
+                            <li><span>Content writing</span><br>Crafting compelling and engaging content</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Programming languages</span><br>C++ and Java</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2026</span><br>BE CSE (Cyber Security) from SKCT<br>CGPA: 8.4</li>
+                            <li><span>2021</span><br>Grade 12 from HMMHSS<Br>Percentage: 91.1%</li>
+                            <li><span>2019</span><br>Grade 10 from HMMHSS<br>Percentage: 89%</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificates">
+                        <ul>
+                            <li><span>NPTEL-Cyber Security and Privacy</span><br>Basic information on cyber security,privacy,networking and cryptography</li>
+                            <li><span>Scouts and Guides-Rajya Puraskar</span><br>A journey of leadership and resillience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------------------------service-->
+<div id="services">
+    <div class="container">
+        <hi class="sub-title">My Services</hi>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2><br>
+                <p>The creations of websites and pages to reflect a company's brand and information and ensure a user-friendly experience</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-uikit"></i>
+                <h2>UI Design</h2><br>
+                <p>Focusing on looks and style to build interface</p>
+            </div>
+            <div>
+                <i class="fa-regular fa-pen-to-square"></i>
+                <h2>Content Writing</h2><br>
+                <p>Providing pertinent content for websites,blogs,essays,product description and social media platforms</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-tile">Contact ME</h1>
+                <p><i class="fa-solid fa-share"></i>contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © Manoj. 2023 <i class="fa-regular fa-heart"></i></p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
